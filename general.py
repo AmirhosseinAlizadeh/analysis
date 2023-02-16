@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
-import matplotlib.pyplot as plt
 
 class General:
     """
@@ -14,7 +13,9 @@ class General:
     - plot_data(self, x_label, y_label, z_label=None, n_cols=None, fit_mode=None): A method for creating 2D and 3D plots from a Pandas DataFrame.
     - print_statistics(self, columns=None, dropna=True): A method for printing various statistical insights about a Pandas DataFrame.
     """
-    
+
+
+
     def __init__(self, filename):
         """
         A constructor method that initializes a Pandas DataFrame from a CSV file.
@@ -22,7 +23,8 @@ class General:
         :param filename: The name of the CSV file to read.
         """
         self.df = pd.read_csv(filename)
-        
+        self.filename = filename
+
     def read_csv(self, n_cols=None, col_contains=None, dropna=True, clean_up=False):
         """
         A method for reading a CSV file into a Pandas DataFrame.
@@ -45,8 +47,8 @@ class General:
             self.df = self.df.dropna()
 
         if dropna:
-            self.df = self.df.dropna()        
-  
+            self.df = self.df.dropna()
+
     def plot_data(self, x_label, y_label, z_label=None, num_cols=None, fit_mode=None, clean_up=False):
         """
         A function that plots a Pandas DataFrame with a specified number of columns and axis labels,
@@ -156,5 +158,11 @@ class General:
         print(f"50th percentile (median):\n{selected_df.quantile(0.5)}")
         print(f"75th percentile:\n{selected_df.quantile(0.75)}")
         print(f"95th percentile:\n{selected_df.quantile(0.95)}")
-    
-    
+
+
+# filename = r'C:\Users\aliza\Downloads\archive (1)\drinks.csv'
+# data = General(filename)
+# data.read_csv(col_contains='wine_serving')
+# # print(data.df)
+# data.print_statistics(columns='wine_servings')
+# # data.plot_data(num_cols=4, x_label='x', y_label='y')
