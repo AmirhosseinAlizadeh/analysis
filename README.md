@@ -1,5 +1,5 @@
 # analysis
-To quickly gain a general understanding of the statistical characteristics of a dataset
+To quickly gain a general understanding of the statistical characteristics of a dataset  
 #general.py  
 The provided code is a Python class with several methods for performing various data manipulation tasks using Pandas DataFrame. The constructor method initializes the DataFrame by reading a CSV file, and a read_csv method is provided to read a CSV file with various optional parameters such as selecting a certain number of columns, selecting columns with specific names, and dropping missing values. The plot_data method can plot selected columns of the DataFrame using Matplotlib, with optional curve fitting, while the print_statistics method prints some summary statistics about the DataFrame. The get_fit_func function returns the appropriate fit function and initial parameter values for the specified curve fitting mode.   
 Impedance Spectrospy  
