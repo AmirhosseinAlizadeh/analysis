@@ -9,4 +9,11 @@ An equivalent circuit model is commonly used to analyze the impedance data.
 The parallel_rc_series function models the equivalent impedance of parallel units of resistors and capacitors connected
 in series, and the fit_parallel_rc_series function fits experimental impedance data to this model. 
 These functions enable the analysis of impedance spectroscopy data to extract important information about the
- electrical and physical properties of a material or system.
+ electrical and physical properties of a material or system.  
+Physics  
+some commonly used physical concepts, 
+including 
+1-the Boltzmann distribution, which describes the distribution of particles in a system with 
+respect to their energy, and
+2-the Maxwell equations,
+ which are fundamental equations of electromagnetism that describe the behavior of electric and magnetic fields.
